@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>เมคอัพอันตรายในปัจจุบัน | Math 107 Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Sarabun:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="overlay" class="overlay"></div>
+
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-box">
+          <span class="logo-icon">🌿</span>
+          <span class="logo-text">Math107</span>
+        </a>
+        <div class="nav-right">
+          <a href="index.html" class="nav-home-btn">Home</a>
+          <button id="menu-toggle" class="menu-btn" aria-label="เปิดเมนู">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <span class="sidebar-title">ตำรับดัชนีเนื้อหา</span>
+        <button id="close-btn" class="close-btn">&times;</button>
+      </div>
+      <ul class="sidebar-links">
+        <li>
+          <a href="index.html"><span class="bullet">🏠</span> หน้าแรก (Home)</a>
+        </li>
+        <li>
+          <a href="history.html"
+            ><span class="bullet">🏮</span> ประวัติเมคอัพ & สารเคมีโบราณ</a
+          >
+        </li>
+        <li>
+          <a href="people.html"
+            ><span class="bullet">👤</span> บุคคลที่คิดค้น</a
+          >
+        </li>
+        <li>
+          <a href="present.html"
+            ><span class="bullet">💄</span> เมคอัพอันตรายในปัจจุบัน</a
+          >
+        </li>
+        <li>
+          <a href="reference.html"
+            ><span class="bullet">📜</span> Reference (เอกสารอ้างอิง)</a
+          >
+        </li>
+      </ul>
+    </aside>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">เมคอัพอันตรายในปัจจุบัน</h2>
+          <div class="modern-card">
+            <p>
+              แม้เทคโนโลยีจะก้าวหน้า แต่ในปัจจุบันยังคงพบสารปนเปื้อนอันตราย เช่น
+              สารปรอทในครีมหน้าขาวผิดกฎหมาย, แร่ใยหิน (Asbestos) ในทัลคัม
+              (Talc), สารพาราเบน และสารฟอร์มาลดีไฮด์
+              ซึ่งสร้างผลกระทบต่อระบบประสาท ตับ และผิวหนังในระยะยาว
+            </p>
+            <div class="toxic-stats">
+              <div class="stat-item">
+                <h4>แร่ใยหิน (Asbestos)</h4>
+                <p>พบปนเปื้อนใน Talc ที่ไม่ได้มาตรฐาน</p>
+              </div>
+              <div class="stat-item">
+                <h4>สารปรอท (Mercury)</h4>
+                <p>พบในครีมเร่งผิวขาวกวนเอง</p>
+              </div>
+              <div class="stat-item">
+                <h4>โลหะหนัก (Heavy Metals)</h4>
+                <p>พบในเม็ดสีของลิปสติกและอายแชโดว์เกรดต่ำ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Math 107 Project &bull; โครงการศึกษาพิษวิทยาในเครื่องสำอาง</p>
+        <small>&copy; 2026 Math 107 Project. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

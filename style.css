@@ -1,0 +1,527 @@
+/* ===================================================
+   THEME: สืบคดีปริศนา หมอยาตำรับโคมแดง 
+   - โทนเขียวหยก (Jade), แดงชาด (Vermilion), กระดาษสา (Parchment), ขอบทอง (Gold)
+   =================================================== */
+
+:root {
+  --bg-parchment: #f9f6ef;
+  --bg-card: #fffdf9;
+  --jade-deep: #1e3f35;
+  --jade-primary: #2d6353;
+  --jade-light: #528978;
+  --vermilion: #b33939;
+  --vermilion-soft: #d9534f;
+  --accent-gold: #c59b27;
+  --accent-gold-light: #eed58a;
+  --text-dark: #2c2523;
+  --text-muted: #6e655f;
+  --border-color: #e5dbc9;
+  --shadow: 0 4px 15px rgba(30, 63, 53, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Sarabun", sans-serif;
+  background-color: var(--bg-parchment);
+  color: var(--text-dark);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  background-image: radial-gradient(#e7dece 0.8px, transparent 0.8px);
+  background-size: 20px 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header & Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: var(--jade-deep);
+  color: #fff;
+  border-bottom: 3px solid var(--accent-gold);
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--accent-gold-light);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+}
+
+.logo-icon {
+  margin-right: 8px;
+  font-size: 1.4rem;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-home-btn {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 4px;
+  border: 1px solid var(--jade-light);
+  transition: all 0.3s;
+}
+
+.nav-home-btn:hover {
+  background-color: var(--jade-light);
+  color: #fff;
+}
+
+/* Hamburger Button */
+.menu-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
+
+.menu-btn span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: var(--accent-gold-light);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Sidebar Drawer */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 300px;
+  height: 100%;
+  background-color: var(--bg-card);
+  border-left: 4px solid var(--vermilion);
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.25);
+  transition: right 0.35s ease;
+  z-index: 1000;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ดันข้อความมาไว้กึ่งกลาง */
+  border-bottom: 2px dashed var(--border-color);
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+.sidebar-title {
+  font-family: "Charm", cursive;
+  font-size: 1.5rem;
+  color: var(--jade-deep);
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+.close-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-55%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--vermilion);
+  line-height: 1;
+}
+
+.sidebar-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sidebar-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background-color: var(--bg-parchment);
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.sidebar-links a:hover {
+  background-color: var(--jade-deep);
+  color: var(--accent-gold-light);
+  transform: translateX(-4px);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  display: none;
+  z-index: 999;
+}
+
+.overlay.show {
+  display: block;
+}
+
+/* Common Section */
+.section {
+  padding: 45px 0;
+}
+
+.section-title {
+  font-family: "Charm", cursive;
+  font-size: 2rem;
+  color: var(--jade-deep);
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--vermilion);
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* Card Styling */
+.hero-card,
+.content-block,
+.modern-card,
+.ref-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-top: 4px solid var(--jade-primary);
+  border-radius: 8px;
+  padding: 28px;
+  margin-bottom: 25px;
+  box-shadow: var(--shadow);
+}
+
+.badge {
+  display: inline-block;
+  background: var(--vermilion);
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.main-title {
+  font-family: "Charm", cursive;
+  font-size: 2.2rem;
+  color: var(--jade-deep);
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+/* Inspiration Box (Image + Text) */
+.inspiration-box {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 20px;
+  align-items: center;
+  background: #fdfaf2;
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px dashed var(--accent-gold);
+}
+
+.image-placeholder {
+  min-height: 200px;
+  background-color: #efe8d8;
+  border: 2px dashed #b5a995;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--text-muted);
+  padding: 15px;
+}
+
+.img-icon {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+/* Members Section */
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px 16px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.avatar {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: var(--jade-light);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: 3px solid var(--accent-gold);
+  margin-bottom: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.member-card:hover .avatar {
+  transform: translateY(-3px);
+  border-color: var(--vermilion);
+}
+
+.member-card .name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.member-card .id {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Responsive สำหรับหน้าจอมือถือ/แท็บเล็ตเล็ก */
+@media (max-width: 680px) {
+  .member-grid {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* ในมือถือจะเรียงเป็น 2 คอลัมน์ 4 แถว เพื่อไม่ให้ตัวหนังสือเบียดกัน */
+    gap: 20px 12px;
+  }
+}
+/* Chemical Badges */
+.chemical-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.chem-badge {
+  text-decoration: none;
+  background: #fff;
+  color: var(--vermilion);
+  border: 1px solid var(--vermilion);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.chem-badge:hover {
+  background: var(--vermilion);
+  color: #fff;
+}
+
+/* Modern Card Stats */
+.toxic-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.stat-item {
+  background: #fdfaf2;
+  border-left: 3px solid var(--accent-gold);
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.stat-item h4 {
+  color: var(--jade-deep);
+  margin-bottom: 4px;
+}
+
+/* References */
+.ref-list {
+  padding-left: 20px;
+  color: var(--text-muted);
+}
+
+.ref-list li {
+  margin-bottom: 8px;
+}
+
+/* Footer */
+/* จัดโครงสร้างทั้งหน้าให้เป็น Flexbox แนวตั้งและสูงเต็มจอ */
+body {
+  font-family: "Sarabun", sans-serif;
+  background-color: var(--bg-parchment);
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-image: radial-gradient(#e7dece 0.8px, transparent 0.8px);
+  background-size: 20px 20px;
+
+  /* เพิ่ม 3 บรรทัดนี้เพื่อให้ครอบคลุมความสูงหน้าจอ */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ให้ main ดึงพื้นที่ว่างที่เหลือทั้งหมด ดัน footer ลงล่างสุดเสมอ */
+main {
+  flex: 1 0 auto;
+}
+
+/* Footer จะแนบติดขอบล่างจอเสมอ ไม่ว่าจะหน้าเนื้อหาสั้นหรือยาว */
+.footer {
+  background: var(--jade-deep);
+  color: #d1dfdb;
+  text-align: center;
+  padding: 24px 0;
+  border-top: 2px solid var(--accent-gold);
+  margin-top: auto; /* เปลี่ยนจาก 40px เป็น auto */
+  width: 100%;
+}
+
+.footer small {
+  display: block;
+  margin-top: 6px;
+  color: #92aba2;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .inspiration-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Inspiration Image */
+.inspiration-box {
+  width: 100%;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px dashed var(--accent-gold);
+  background: #fdfaf2;
+
+  /* สำคัญ */
+  display: block;
+}
+
+.image-placeholder {
+  width: 100%;
+  overflow: hidden;
+
+  background: #efe8d8;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+
+  padding: 0;
+  margin: 0;
+}
+
+.inspiration-image {
+  display: block;
+
+  width: 100%;
+  height: 320px;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 12px 12px 0 0;
+}
+
+.image-placeholder p {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 0;
+
+  text-align: center;
+  line-height: 1.5;
+}
+
+.image-placeholder small {
+  opacity: 0.7;
+}
+
+/* มือถือ */
+@media (max-width: 768px) {
+  .inspiration-box {
+    grid-template-columns: 1fr;
+  }
+
+  .inspiration-image {
+    height: auto;
+    max-height: 450px;
+    object-fit: contain;
+  }
+}

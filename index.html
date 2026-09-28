@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>บันทึกพิษและเครื่องสำอาง | Math 107 Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts: ฟอนต์สไตล์พู่กันและอ่านง่าย -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Sarabun:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Overlay สำหรับปิดเมนูเมื่อคลิกด้านนอก -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Header & Navigation Bar -->
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="#home" class="logo-box">
+          <span class="logo-icon">🌿</span>
+          <span class="logo-text">Math107</span>
+        </a>
+
+        <div class="nav-right">
+          <a href="#home" class="nav-home-btn">Home</a>
+          <!-- Hamburger Menu Button -->
+          <button id="menu-toggle" class="menu-btn" aria-label="เปิดเมนู">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sidebar Drawer เมนูนำทาง (อิงตาม Wireframe) -->
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <span class="sidebar-title">ตำรับดัชนีเนื้อหา</span>
+        <button id="close-btn" class="close-btn">&times;</button>
+      </div>
+      <ul class="sidebar-links">
+        <li><a href="index.html"><span class="bullet">🏠</span> หน้าแรก (Home)</a></li>
+        <li><a href="history.html"><span class="bullet">🏮</span> ประวัติเมคอัพ & สารเคมีโบราณ</a></li>
+        <li><a href="people.html"><span class="bullet">👤</span> บุคคลที่คิดค้น</a></li>
+        <li><a href="present.html"><span class="bullet">💄</span> เมคอัพอันตรายในปัจจุบัน</a></li>
+        <li><a href="reference.html"><span class="bullet">📜</span> Reference (เอกสารอ้างอิง)</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Section 1: Hero / Home & ที่มาของไอเดีย -->
+      <section id="home" class="section hero-section">
+        <div class="container">
+          <div class="hero-card">
+            <div class="badge">Inspiration & Story</div>
+            <h1 class="main-title">ชันสูตรพิษในผงประทินผิว</h1>
+            <p class="subtitle">
+              ถอดรหัสสารเคมีอันตรายจากวรรณกรรมสู่ความจริงทางวิทยาศาสตร์
+            </p>
+
+            <div class="inspiration-box">
+  <div class="image-placeholder">
+    <img
+      src="https://www.phoenixnext.com/media/nextgenimages/media/magefan_blog/New_Project_1__22.webp"
+      alt="เหมาเหมา จากเรื่องสืบคดีปริศนา หมอยาตำรับโคมแดง"
+      class="inspiration-image"
+    />
+
+    <p>
+      รูปภาพ Anime ที่เป็น Inspiration<br />
+      <small>(เหมาเหมากับแป้งทาหน้าสตรีวังหลัง)</small>
+    </p>
+  </div>
+</div>
+              <div class="text-content">
+                <h3 style="margin-top: 20px;">ที่มาของไอเดียโปรเจกต์</h3>
+                <p>
+                  แรงบันดาลใจจากซีรีส์
+                  <em>"สืบคดีปริศนา หมอยาตำรับโคมแดง"</em>
+                  เมื่อความงามในประวัติศาสตร์มักเคลือบแฝงด้วยอันตราย เช่น
+                  แป้งผัดหน้าผสมสารตะกั่วขาวและปรอทในวังหลัง โปรเจกต์ Math 107
+                  นี้นำเอาข้อมูลประวัติศาสตร์ การวิเคราะห์สารเคมี
+                  และการคำนวณทางสถิติ/ปริมาณสารพิษมาอธิบายผลกระทบต่อร่างกายมนุษย์
+                </p>
+              </div>
+            </div>
+          </div>
+
+         <!-- Member Section -->
+<div class="member-section">
+  <h2 class="section-title">คณะผู้จัดทำ (Members)</h2>
+  <div class="member-grid">
+    <!-- แถวบน 4 คน -->
+    <div class="member-card">
+      <div class="avatar">1</div>
+      <span class="name">ชื่อ-นามสกุล</span>
+      <span class="id">รหัสนักศึกษา</span>
+    </div>
+    <div class="member-card">
+      <div class="avatar">2</div>
+      <span class="name">ชื่อ-นามสกุล</span>
+      <span class="id">รหัสนักศึกษา</span>
+    </div>
+    <div class="member-card">
+      <div class="avatar">3</div>
+      <span class="name">ชื่อ-นามสกุล</span>
+      <span class="id">รหัสนักศึกษา</span>
+    </div>
+    <div class="member-card">
+      <div class="avatar">4</div>
+      <span class="name">ชื่อ-นามสกุล</span>
+      <span class="id">รหัสนักศึกษา</span>
+    </div>
+
+    <!-- แถวล่าง 4 คน -->
+    <div class="member-card">
+      <div class="avatar">5</div>
+      <span class="name">ชื่อ-นามสกุล</span>
+      <span class="id">รหัสนักศึกษา</span>
+    </div>
+    <div class="member-card">
+      <div class="avatar">6</div>
+      <span class="name">ชื่อ-นามสกุล</span>
+      <span class="id">รหัสนักศึกษา</span>
+    </div>
+    <div class="member-card">
+      <div class="avatar">7</div>
+      <span class="name">ชื่อ-นามสกุล</span>
+      <span class="id">รหัสนักศึกษา</span>
+    </div>
+    <div class="member-card">
+      <div class="avatar">8</div>
+      <span class="name">ชื่อ-นามสกุล</span>
+      <span class="id">รหัสนักศึกษา</span>
+    </div>
+  </div>
+</div>
+
+    
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>Math 107 Project &bull; โครงการศึกษาพิษวิทยาในเครื่องสำอาง</p>
+        <small>&copy; 2026 Math 107 Project. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

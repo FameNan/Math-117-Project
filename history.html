@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ประวัติเมคอัพอันตราย | Math 107 Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Sarabun:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="overlay" class="overlay"></div>
+
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-box">
+          <span class="logo-icon">🌿</span>
+          <span class="logo-text">Math107</span>
+        </a>
+        <div class="nav-right">
+          <a href="index.html" class="nav-home-btn">Home</a>
+          <button id="menu-toggle" class="menu-btn" aria-label="เปิดเมนู">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <span class="sidebar-title">ตำรับดัชนีเนื้อหา</span>
+        <button id="close-btn" class="close-btn">&times;</button>
+      </div>
+      <ul class="sidebar-links">
+        <li>
+          <a href="index.html"><span class="bullet">🏠</span> หน้าแรก (Home)</a>
+        </li>
+        <li>
+          <a href="history.html"
+            ><span class="bullet">🏮</span> ประวัติเมคอัพ & สารเคมีโบราณ</a
+          >
+        </li>
+        <li>
+          <a href="people.html"
+            ><span class="bullet">👤</span> บุคคลที่คิดค้น</a
+          >
+        </li>
+        <li>
+          <a href="present.html"
+            ><span class="bullet">💄</span> เมคอัพอันตรายในปัจจุบัน</a
+          >
+        </li>
+        <li>
+          <a href="reference.html"
+            ><span class="bullet">📜</span> Reference (เอกสารอ้างอิง)</a
+          >
+        </li>
+      </ul>
+    </aside>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">History & Dangerous Chemicals</h2>
+
+          <div class="content-block">
+            <h3>ประวัติเมคอัพ & แป้งผัดหน้าที่แฝงสารเคมีอันตราย</h3>
+            <p>
+              ย้อนรอยสูตรเครื่องสำอางยุคโบราณที่สตรีชั้นสูงนิยมใช้ผิวขาวซีดเป็นสัญลักษณ์แห่งชนชั้นสูง
+              นำไปสู่การคิดค้นแป้งผัดหน้าตะกั่ว (White Lead) และสารปรอท
+              (Cinnabar) เพื่อขับผิวให้ขาวเนียนผ่อง โดยไม่ตระหนักถึงพิษสะสม
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h3>สารเคมีอันตรายที่ตรวจพบในประวัติศาสตร์</h3>
+            <div class="chemical-links">
+              <a href="#" class="chem-badge">ตะกั่วขาว (Lead White)</a>
+              <a href="#" class="chem-badge">สารหนู (Arsenic)</a>
+              <a href="#" class="chem-badge">ปรอท / ชาด (Mercury / Cinnabar)</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Math 107 Project &bull; โครงการศึกษาพิษวิทยาในเครื่องสำอาง</p>
+        <small>&copy; 2026 Math 107 Project. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
